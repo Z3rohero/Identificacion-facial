@@ -1,13 +1,16 @@
 "use strict";
 
+const uploaderfile = file =>{
+  
+}
 
 const uploader =(submitSelector,imagesListSelector)=>{
 
   const submit = document.querySelector(submitSelector);
   const imagenlist = document.querySelector(imagesListSelector);
-
-  submit.addEvenListener('change',()=>{
-    alert("funcionado");
+  //evento de envio
+  submit.addEvenListener('change',e =>{
+     uploaderfile(e.target.files[0]);
   })
   
 }

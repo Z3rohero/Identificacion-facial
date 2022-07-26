@@ -8130,9 +8130,10 @@ exports.default = void 0;
 
 var uploader = function uploader(submitSelector, imagesListSelector) {
   var submit = document.querySelector(submitSelector);
-  var imagenlist = document.querySelector(imagesListSelector);
+  var imagenlist = document.querySelector(imagesListSelector); //evento de envio
+
   submit.addEvenListener('change', function () {
-    a.log("funcionado");
+    alert("funcionado");
   });
 };
 
@@ -8252,7 +8253,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41725" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44019" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

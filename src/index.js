@@ -1,6 +1,8 @@
 import 'babel-polyfill';
 import  uploader from './uploader.js';
 
+
+
 const main =  async () =>{
     uploader('.input-submit','.images-list');
     const videoContainer = document.queryselector("#video"); 
@@ -10,12 +12,13 @@ const main =  async () =>{
    // la camara se tiene que hacer asi 
    // funciones para dar pemisop
   /*
-  esta dar ppermisso convaigatr
+ 
+  
   await navigator.mediaDevices.getUserMedia({
   
   })
   */
-  const video = await navigator.mediaDevices.getUserMedia({video:true});
+  const video = await navigator.mediaDevices.getUserMedia({video:true,audio:true});
   //para ver el video de la camara que sea igual
   videoContainer.srcObject = video;
   //aca estoy dibujadno el perfil de la cara para reconocer 
@@ -32,5 +35,8 @@ const main =  async () =>{
   
   
 }
+
+
+
 
 main();
